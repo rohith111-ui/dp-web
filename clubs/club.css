@@ -1,0 +1,722 @@
+/* =========================================================================
+   CLUB PAGE STYLES — extends style.css (variables, header, footer, buttons,
+   cards, grids are all reused from the main stylesheet)
+   ========================================================================= */
+
+/* breadcrumb */
+.crumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin: 24px 0 0;
+  flex-wrap: wrap;
+}
+
+.crumb a {
+  color: var(--text-dim);
+  transition: color .2s;
+}
+
+.crumb a:hover {
+  color: var(--blue-bright);
+}
+
+.crumb span.sep {
+  opacity: .5;
+}
+
+.crumb span.here {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* club hero */
+.club-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0 20px;
+  flex-wrap: wrap;
+}
+
+.club-hero .club-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.club-hero .club-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.club-hero h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.club-hero .tagline {
+  color: var(--text-dim);
+  font-size: 15px;
+  margin-top: 6px;
+}
+
+.club-hero-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+/* quick-jump pills */
+.jumpnav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 0 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 50px;
+}
+
+.jumpnav a {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: all .2s;
+  white-space: nowrap;
+}
+
+.jumpnav a:hover {
+  border-color: var(--flag, var(--blue));
+  color: var(--flag, var(--blue));
+}
+
+/* vision/mission */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.vm-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--flag, var(--blue));
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.vm-card h4 {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--flag, var(--blue));
+  margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.vm-card p {
+  font-size: 14.5px;
+  color: var(--text-dim);
+}
+
+/* stat strip reused via .stat-box already in style.css */
+
+/* members grid */
+.member-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: all .25s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--flag, var(--blue));
+  box-shadow: 0 12px 30px rgba(46, 159, 255, 0.12);
+}
+
+.member-card .name {
+  font-weight: 700;
+  font-size: 14.5px;
+  margin-top: 12px;
+}
+
+.member-card .role-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--flag, var(--blue));
+  background: color-mix(in srgb, var(--flag, var(--blue)) 12%, transparent);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.member-card .sub {
+  font-size: 11.5px;
+  color: var(--text-dim2);
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.members-heads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.members-rest {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* section sub-label above member-grids */
+.sub-label {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim2);
+  font-family: 'JetBrains Mono', monospace;
+  margin: 30px 0 14px;
+}
+
+.sub-label:first-child {
+  margin-top: 0;
+}
+
+/* event tabs (past / upcoming) */
+.event-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.event-tab {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.event-tab.active {
+  background: var(--flag, var(--blue));
+  border-color: var(--flag, var(--blue));
+  color: #00121F;
+}
+
+.event-tab .count {
+  opacity: .75;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.event-pane {
+  display: none;
+}
+
+.event-pane.active {
+  display: block;
+}
+
+/* upcoming event card */
+.upcoming-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.upcoming-date {
+  flex-shrink: 0;
+  width: 68px;
+  text-align: center;
+  background: var(--bg-3);
+  border: 1px solid var(--flag, var(--blue));
+  border-radius: 10px;
+  padding: 10px 6px;
+}
+
+.upcoming-date .d {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--flag, var(--blue));
+}
+
+.upcoming-date .m {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.upcoming-body {
+  flex: 1;
+  min-width: 200px;
+}
+
+.upcoming-body h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+}
+
+.upcoming-body p {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+.upcoming-body .btn {
+  margin-top: 14px;
+}
+
+.empty-note {
+  color: var(--text-dim);
+  font-size: 14px;
+  background: var(--bg-2);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+/* past event card */
+.past-event {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+.past-event-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.past-event-head h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.past-event-head .meta {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+.past-event-head .meta b {
+  color: var(--flag, var(--blue));
+}
+
+.past-event p.desc {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  margin: 12px 0 16px;
+}
+
+.winners-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.winner-chip {
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 201, 60, 0.12);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.participants-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.participants-table th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim2);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.participants-table td {
+  padding: 9px 10px;
+  border-bottom: 1px dashed var(--border);
+  color: var(--text);
+}
+
+.participants-table tr:last-child td {
+  border-bottom: none;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.event-actions .btn {
+  padding: 9px 16px;
+  font-size: 12.5px;
+}
+
+.event-gallery-mini {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.event-gallery-mini img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .2s;
+  border: 1px solid var(--border);
+}
+
+.event-gallery-mini img:hover {
+  transform: scale(1.04);
+  border-color: var(--flag, var(--blue));
+}
+
+/* registration desk */
+.reg-wrap {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 34px;
+}
+
+.reg-side h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reg-side p {
+  font-size: 13.5px;
+  color: var(--text-dim);
+}
+
+.reg-side ul {
+  margin-top: 16px;
+  padding-left: 18px;
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.reg-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.reg-form .full {
+  grid-column: 1 / -1;
+}
+
+.reg-form label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.reg-form input,
+.reg-form select,
+.reg-form textarea {
+  width: 100%;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 12px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  transition: border-color .2s;
+}
+
+.reg-form input:focus,
+.reg-form select:focus,
+.reg-form textarea:focus {
+  outline: none;
+  border-color: var(--flag, var(--blue));
+}
+
+.reg-form button {
+  grid-column: 1 / -1;
+  margin-top: 4px;
+}
+
+.reg-note {
+  grid-column: 1 / -1;
+  font-size: 11.5px;
+  color: var(--text-dim2);
+}
+
+/* contact grid on club page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all .2s;
+}
+
+.contact-card:hover {
+  border-color: var(--flag, var(--blue));
+  transform: translateY(-2px);
+}
+
+.contact-card .ci {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(46, 159, 255, 0.1);
+  border: 1px solid var(--flag, var(--blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card .ci svg {
+  width: 19px;
+  height: 19px;
+  color: var(--flag, var(--blue));
+}
+
+.contact-card .cl {
+  font-size: 11px;
+  color: var(--text-dim2);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.contact-card .cv {
+  font-size: 13.5px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(3, 7, 15, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* other-clubs footer nav */
+.other-clubs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.other-club-link {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 13.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .2s;
+}
+
+.other-club-link:hover {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+  transform: translateY(-2px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+  .vm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .other-clubs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .club-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .club-hero-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .club-hero-actions .btn {
+    flex: 1;
+  }
+
+  .past-event-head {
+    flex-direction: column;
+  }
+
+  .participants-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .reg-form {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-form .full {
+    grid-column: 1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .other-clubs {
+    grid-template-columns: 1fr;
+  }
+
+  .event-tabs {
+    flex-wrap: wrap;
+  }
+
+  .event-tab {
+    flex: 1;
+    text-align: center;
+  }
+
+  .upcoming-card {
+    flex-direction: column;
+  }
+
+  .upcoming-date {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .club-hero .club-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .club-hero .club-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .reg-wrap {
+    padding: 20px;
+  }
+}

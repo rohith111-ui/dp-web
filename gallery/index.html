@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Data Pirates</title>
+  <meta name="description" content="Explore our photo archive from hackathons, innovation sprints, AI workshops, and Data Pirates NNRG events.">
+  <link rel="icon" type="image/jpeg" href="../images/favicon.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body class="light-mode">
+  <div class="glow-bg"></div>
+  <div class="grid-overlay"></div>
+
+  <header>
+    <a href="../index.html" class="logo">
+      <div class="logo-mark logo-animated"><img src="../images/nav_logo.jpeg" alt="Data Pirates NNRG logo"></div>
+      DATA <b>PIRATES</b>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#updates">Announcements</a>
+      <a href="../index.html#members">Members</a>
+      <a href="../index.html#clubs">Clubs</a>
+      <a href="index.html" class="active">Gallery</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="../index.html#contact" class="btn btn-ghost">Contact</a>
+      <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html#home">Home</a>
+      <a href="../index.html#updates">Announcements</a>
+      <a href="../index.html#members">Members</a>
+      <a href="../index.html#clubs">Clubs</a>
+      <a href="index.html" class="active">Gallery</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- BREADCRUMB -->
+    <div class="crumb" style="padding-top: 24px;">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <span class="here">Gallery</span>
+    </div>
+
+    <!-- GALLERY HERO & FILTERS -->
+    <section class="gallery-hero">
+      <div class="eyebrow" style="color: var(--blue-bright); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 13px; margin-bottom: 12px;">Moments & &amp; Milestones</div>
+      <h1>Our Complete Photo Archive</h1>
+      <p class="tagline">From high-energy hackathon nights and innovation pitches to AI bootcamp sprints and leadership meets—explore the vibrant life of Data Pirates.</p>
+      
+      <!-- INTERACTIVE FILTER PILLS -->
+      <div class="gallery-filters" id="galleryFilters"></div>
+    </section>
+
+    <!-- FULL PHOTO GRID -->
+    <section class="full-gallery-container">
+      <div class="full-gallery-grid" id="fullGalleryGrid"></div>
+    </section>
+
+    <!-- CONTACT BANNER -->
+    <section id="contact">
+      <div class="cta-band">
+        <div>
+          <h3>Ready to Navigate Data &amp; Create Impact?</h3>
+          <p>Join our collaborative community of innovators, builders, and aspiring leaders at NNRG.</p>
+        </div>
+        <div>
+          <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:16px 36px;font-size:16px;">Become a Member &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="../images/footer_logo.jpeg" alt="Data Pirates Footer Logo" class="foot-logo-img">
+          <span>DATA PIRATES</span>
+        </div>
+        <p style="color:var(--text-dim);font-size:13px;max-width:260px;">Connecting passionate minds to learn, build,
+          and make an impact. <a href="https://nnrg.edu.in/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-bright);">NNRG</a></p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="../index.html#home">Home</a><a href="../index.html#clubs">Clubs</a><a href="index.html">Gallery</a>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <a href="../index.html#updates">Announcements</a><a href="../index.html#members">Members</a>
+      </div>
+      <div>
+        <h5>Connect With Us</h5>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/datapirates_nnrg?igsh=MTB2MWIzNXd2eTIxOA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nnrg-ds?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /><path d="M10 9v12M10 13c0-2 2-4 4.5-4S19 11 19 13v8" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Data Pirates &middot; Nalla Narasimha Reddy Education Society's Group of Institutions (NNRG), Hyderabad. All rights reserved.</span>
+      <a href="https://portfolio-pi-nine-75byigaozo.vercel.app/" target="_blank" rel="noopener noreferrer" class="built-by-btn">
+        <span class="built-by-text">Built By</span><span class="built-by-name">M. Rohith Reddy</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../announcements_and_results.js"></script>
+  <script src="gallery.js"></script>
+</body>
+
+</html>
