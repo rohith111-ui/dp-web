@@ -54,6 +54,31 @@
   height: 30px;
 }
 
+.club-hero-photo {
+  width: min(380px, 38vw);
+  min-height: 190px;
+  aspect-ratio: 16 / 8;
+  border-radius: 18px;
+  background-color: var(--surface-2);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 14px 34px rgba(23, 36, 84, .16);
+  border: 1px solid var(--border);
+  order: 2;
+}
+
+.club-hero h1 {
+  order: 3;
+}
+
+.club-hero > div:nth-of-type(3) {
+  order: 4;
+}
+
+.club-hero-actions {
+  order: 5;
+}
+
 .club-hero h1 {
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;

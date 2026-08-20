@@ -34,6 +34,7 @@ const CLUB_DATA = {
     tagline: 'Startups, Business Innovation & Leadership',
     flag: '#2E9FFF',
     icon: 'briefcase',
+    heroImage: '../images/club-entrepreneurship-hero.png',
     vision: 'To cultivate a campus-wide culture of enterprise, where every student sees themselves as a builder — capable of turning an idea into a venture that creates real value.',
     mission: 'We run pitch challenges, founder talks, and business-model workshops that give students hands-on practice with ideation, validation, and storytelling — the core skills behind every startup.',
     contact: {
@@ -110,6 +111,7 @@ const CLUB_DATA = {
     tagline: 'Media, Design, Storytelling & Branding',
     flag: '#00D4FF',
     icon: 'pen',
+    heroImage: '../images/club-content-creation-hero.png',
     vision: 'To make Data Pirates the loudest, most creative student voice on campus — telling our story through video, design, and writing that people actually want to watch, read, and share.',
     mission: 'We train members in reels, graphic design, copywriting, and event coverage, and give every campaign a real audience by running it on the club\'s official channels.',
     contact: {
@@ -165,6 +167,7 @@ const CLUB_DATA = {
     tagline: 'Visual Storytelling, Event Coverage & Cinematography',
     flag: '#A855F7',
     icon: 'camera',
+    heroImage: '../images/club-photography-hero.png',
     vision: 'To see campus life through a sharper lens — building a team that can capture any moment, from a candid hallway laugh to a full college fest, with craft and consistency.',
     mission: 'We run photo walks, composition workshops, and official event-coverage assignments so members build a real portfolio while documenting Data Pirates history.',
     contact: {
@@ -233,6 +236,7 @@ const CLUB_DATA = {
     tagline: 'Athletics, Physical Fitness & Tournaments',
     flag: '#FF9F43',
     icon: 'trophy',
+    heroImage: '../images/club-sports-hero.png',
     vision: 'To build a fitter, more competitive Data Pirates — where every member has a team, a tournament, and a reason to show up and play.',
     mission: 'We organise inter-club and inter-college tournaments across cricket, badminton, and athletics, and run regular fitness sessions open to every member.',
     contact: {

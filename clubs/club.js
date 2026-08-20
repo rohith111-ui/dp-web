@@ -49,6 +49,12 @@ if (!CLUB) {
   document.title = CLUB.name + ' — Data Pirates';
   const heroIcon = document.getElementById('clubHeroIcon');
   if (heroIcon) heroIcon.innerHTML = icon(CLUB.icon);
+  const heroPhoto = document.getElementById('clubHeroPhoto');
+  if (heroPhoto && CLUB.heroImage) {
+    heroPhoto.style.backgroundImage = `url("${CLUB.heroImage}")`;
+    heroPhoto.setAttribute('role', 'img');
+    heroPhoto.setAttribute('aria-label', `${CLUB.name} activity photo`);
+  }
   const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
   setText('clubHeroName', CLUB.name);
   setText('clubHeroTagline', CLUB.tagline);
