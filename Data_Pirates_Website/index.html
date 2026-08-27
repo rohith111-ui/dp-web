@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pirates — Official Student Technology Club | NNRG</title>
+  <meta name="description" content="Data Pirates is the official Computer Science & Engineering (Data Science) student club at Nalla Narasimha Reddy Education Society's Group of Institutions (NNRG), Hyderabad.">
+  <meta name="theme-color" content="#2472DB">
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light-mode">
+  <div class="glow-bg" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header id="siteHeader">
+    <a href="#home" class="logo" aria-label="Data Pirates Home">
+      <div class="logo-mark"><img src="images/nav_logo.jpeg" alt="Data Pirates NNRG logo"></div>
+      DATA <b>PIRATES</b>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Main Navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#updates">Announcements</a>
+      <a href="#members">Members</a>
+      <a href="#clubs">Clubs</a>
+      <a href="gallery/index.html">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+      <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+      <a href="#home">Home</a>
+      <a href="#updates">Announcements</a>
+      <a href="#members">Members</a>
+      <a href="#clubs">Clubs</a>
+      <a href="gallery/index.html">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join Us</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME HERO -->
+    <section id="home" class="hero reveal-on-scroll">
+      <div>
+        <div class="eyebrow-badge">
+          <span class="pulse-dot"></span>
+          EXPLORE &middot; ANALYZE &middot; INNOVATE
+        </div>
+        <h1>DATA <span class="accent">PIRATES</span></h1>
+        <p class="lede">Data Pirates is the official Computer Science &amp; Engineering (Data Science) student club at
+          <a href="https://nnrg.edu.in/" target="_blank" rel="noopener noreferrer"
+            style="color:var(--blue);font-weight:600;text-decoration:underline;">NNRG Engineering College</a>, Hyderabad. We
+          empower students to develop technical expertise through hands-on learning, innovation, hackathons, workshops,
+          coding challenges, and real-world projects. Our mission is to build a collaborative community that inspires
+          creativity, leadership, and continuous growth in emerging technologies.</p>
+        <div class="hero-actions">
+          <a href="#clubs" class="btn btn-primary">Explore Clubs</a>
+          <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost">Join Us &rarr;</a>
+        </div>
+        <div class="stat-strip" id="statStrip"></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-logo-wrapper">
+          <img src="images/hero_logo.jpeg" alt="Data Pirates Official Club Badge" class="hero-logo-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- ANNOUNCEMENTS + RESULTS SIDE BY SIDE -->
+    <section id="updates" class="reveal-on-scroll">
+      <div class="section-head">
+        <div class="eyebrow">Latest Updates</div>
+        <h2>Announcements &amp; Results</h2>
+        <p>Live club dispatches on the left, recent event outcomes on the right.</p>
+      </div>
+      <div class="update-grid">
+        <div class="update-panel">
+          <div class="panel-title">
+            <span class="dot"></span>
+            <h3>Announcements</h3>
+            <span class="badge">LIVE FEED</span>
+          </div>
+          <div class="ticker-wrap">
+            <div class="ticker-track" id="tickerTrack"></div>
+          </div>
+        </div>
+        <div class="update-panel">
+          <div class="panel-title">
+            <span class="dot" style="background:var(--gold);box-shadow:0 0 10px var(--gold);"></span>
+            <h3>Results</h3>
+            <span class="badge" style="color:var(--gold);background:rgba(201, 138, 0, 0.1);">OUTCOMES</span>
+          </div>
+          <div class="results-stack" id="resultsStack"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLUBS -->
+    <section id="clubs" class="reveal-on-scroll clubs-reference-section">
+      <div class="clubs-reference-head">
+        <div class="eyebrow">Explore Our Clubs</div>
+        <h2>Five Crews. One Pirate Family.</h2>
+        <p>Expand any card to see the full crew and results.</p>
+        <span class="clubs-reference-rule" aria-hidden="true"></span>
+      </div>
+      <div class="clubs-reference-grid" id="clubGrid"></div>
+      <div class="clubs-reference-note">Expand any card to see the full crew and results.</div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="events-showcase reveal-on-scroll">
+      <div class="events-head">
+        <div>
+          <div class="eyebrow">Track Record</div>
+          <h2>Events</h2>
+          <p>Explore what's coming up next and relive the moments that shaped our journey.</p>
+        </div>
+      </div>
+
+      <div class="events-showcase-grid">
+        <a class="event-feature-card" href="clubs/upcoming-events.html" aria-label="View upcoming events">
+          <img src="images/events/upcoming-events-hq.jpg" alt="Data Pirates students presenting at an upcoming event">
+          <span class="event-card-overlay"></span>
+          <div class="event-card-copy">
+            <span class="event-card-kicker">Stay Ahead</span>
+            <h3>Upcoming Events</h3>
+            <span class="event-card-desc">Discover workshops, competitions and activities coming next.</span>
+          </div>
+          <span class="event-card-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="event-feature-card" href="clubs/past-events.html" aria-label="View past events">
+          <img src="images/events/past-events-hq.jpg" alt="Data Pirates students celebrating a past event">
+          <span class="event-card-overlay"></span>
+          <div class="event-card-copy">
+            <span class="event-card-kicker">Look Back</span>
+            <h3>Past Events</h3>
+            <span class="event-card-desc">Revisit the highlights, competitions and memories we created together.</span>
+          </div>
+          <span class="event-card-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="events-note">
+        <span class="events-note-line"></span>
+        <span>Stay connected with Data Pirates. There's always something happening next.</span>
+        <span class="events-note-line"></span>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW -->
+    <section id="gallery" class="reveal-on-scroll">
+      <div class="section-head">
+        <div class="eyebrow">Glimpses</div>
+        <h2>From Our Events</h2>
+        <p>A curated glimpse of our vibrant club moments, hackathons, and AI bootcamps. Click any photo to expand or explore our entire collection below.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <div class="gallery-cta-box">
+        <a href="gallery/index.html" class="btn-gallery-explore">
+          <span>Explore Full Gallery (All Photos)</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal-on-scroll">
+      <div class="section-head">
+        <div class="eyebrow">About Us</div>
+        <h2>Navigating Data. Creating Impact.</h2>
+        <p>Data Pirates is built on the belief that innovation begins with curiosity and collaboration. We provide
+          students with opportunities to learn beyond the classroom through practical experiences, technical
+          competitions, industry focused workshops, and real world projects. By fostering teamwork, creativity, and
+          leadership, we empower every member to develop the confidence and skills needed to succeed in academics,
+          careers, and the rapidly evolving world of technology.</p>
+      </div>
+      <div class="grid-4" id="valuesGrid"></div>
+
+      <div class="section-head" id="members" style="margin-top:64px;">
+        <div class="eyebrow">Our Leadership</div>
+        <h2>Members</h2>
+      </div>
+      <div class="grid-5" id="leadershipGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal-on-scroll">
+      <div class="cta-band">
+        <div>
+          <h3>Be a part of the crew!</h3>
+          <p>Join Data Pirates and start your journey into the world of data and beyond.</p>
+        </div>
+        <a href="https://forms.gle/R5Wi1VMTRRuQQtkx8" target="_blank" rel="noopener noreferrer"
+          class="btn btn-primary">Join Us Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px;">
+          <div class="logo-mark"><img src="images/footer_logo.jpeg" alt="Data Pirates NNRG logo"></div>
+          DATA <b>PIRATES</b>
+        </div>
+        <p style="color:var(--text-dim);font-size:13.5px;max-width:280px;line-height:1.6;">
+          Connecting passionate minds to learn, build, and make an impact at
+          <a href="https://nnrg.edu.in/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:600;">NNRG</a>.
+        </p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a>
+        <a href="#clubs">Clubs</a>
+        <a href="gallery/index.html">Gallery</a>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <a href="#updates">Announcements</a>
+        <a href="#members">Members</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div>
+        <h5>Connect With Us</h5>
+        <div class="foot-socials">
+          <a href="https://www.instagram.com/datapirates_nnrg?igsh=MTB2MWIzNXd2eTIxOA==" target="_blank"
+            rel="noopener noreferrer" aria-label="Follow Data Pirates on Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nnrg-ds?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank" rel="noopener noreferrer" aria-label="Connect with Data Pirates on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+              <path d="M10 9v12M10 13c0-2 2-4 4.5-4S19 11 19 13v8" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Data Pirates &middot; Nalla Narasimha Reddy Education Society's Group of Institutions (NNRG), Hyderabad. All rights reserved.</span>
+      <a href="https://portfolio-pi-nine-75byigaozo.vercel.app/" target="_blank" rel="noopener noreferrer" class="built-by-btn">
+        <span class="built-by-text">Built By</span>
+        <span class="built-by-name">M. Rohith Reddy</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="announcements_and_results.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
